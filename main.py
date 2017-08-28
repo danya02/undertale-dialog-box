@@ -38,10 +38,10 @@ def insert_text(surface, line, text, sans=False, papyrus=False):
             start_position = (188, 67)
         elif line == 3:
             start_position = (188, 103)
-    surface.blit(font.render(text, 0, pygame.Color("#ffffff"), start_position)
+    surface.blit(font.render(text, 0, pygame.Color("#ffffff")), start_position)
 
 def insert_character(surface, char, version):
-    surface.blit(pygame.load(os.path.join("assets", char, str(version))+".png", (24, 24))
+    surface.blit(pygame.image.load("assets/"+char+"/"+str(version)+".png"), (24, 24))
 
 def insert_asterisk(surface, line, sans=False):
     if sans:
@@ -54,7 +54,7 @@ def insert_asterisk(surface, line, sans=False):
         start_position = (153, 67)
     elif line == 3:
         start_position = (153, 103)
-    surface.blit(font.render("*", 0, pygame.Color("#ffffff"), start_position)
+    surface.blit(font.render("*", 0, pygame.Color("#ffffff")), start_position)
 
 if __name__ == "__main__":
     d = pygame.display.set_mode((596, 168))

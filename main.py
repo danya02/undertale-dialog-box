@@ -19,6 +19,9 @@ def insert_text(surface, line, text):
         start_position = (188, 103)
     surface.blit(font.render(text, 0, pygame.Color("#ffffff"))
 
+def insert_character(surface, char, version):
+    surface.blit(pygame.load(os.path.join("sprites", char, str(version))+".png", (24, 24))
+
 if __name__ == "__main__":
     d = pygame.display.set_mode((596, 168))
     d.blit(generate_main_frame(), (0,0))

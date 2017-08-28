@@ -20,7 +20,7 @@ def insert_text(surface, line, text):
     surface.blit(font.render(text, 0, pygame.Color("#ffffff"), start_position)
 
 def insert_character(surface, char, version):
-    surface.blit(pygame.load(os.path.join("sprites", char, str(version))+".png", (24, 24))
+    surface.blit(pygame.load(os.path.join("assets", char, str(version))+".png", (24, 24))
 
 def insert_asterisk(surface, line):
     font = pygame.font.Font(pygame.font.match_font("determinationmonoweb"), 32)

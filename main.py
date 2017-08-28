@@ -7,8 +7,8 @@ pygame.init()
 def generate_main_frame():
     output = pygame.Surface((596, 168))
     output.fill(pygame.Color("#000000"))
-    output.fill(pygame.Color("#ffffff"), pygame.Rect(8, 8, 579, 151))
-    output.fill(pygame.Color("#000000"), pygame.Rect(14, 14, 567, 139))
+    output.fill(pygame.Color("#ffffff"), pygame.Rect(8, 8, 580, 152))
+    output.fill(pygame.Color("#000000"), pygame.Rect(14, 14, 568, 140))
     return output
 
 def insert_text(surface, line, text, sans=False, papyrus=False):
@@ -31,7 +31,7 @@ def insert_text(surface, line, text, sans=False, papyrus=False):
         elif line == 3:
             start_position = (154, 100)
     else:
-        font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 32)
+        font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 26)
         if line == 1:
             start_position = (188, 31)
         elif line == 2:
@@ -47,7 +47,7 @@ def insert_asterisk(surface, line, sans=False):
     if sans:
         font = pygame.font.Font(os.path.join("assets", "sans.ttf"), 32)
     else:
-        font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 32)
+        font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 26)
     if line == 1:
         start_position = (153, 31)
     elif line == 2:
@@ -67,6 +67,7 @@ if __name__ == "__main__":
     insert_text(d, 2, "I'm FLOWEY!")
     insert_text(d, 3, "FLOWEY the FLOWER!")
     pygame.display.flip()
+    pygame.image.save(d, "/tmp/image.png")
     pygame.time.wait(5000)
     pygame.quit()
 

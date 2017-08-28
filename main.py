@@ -10,7 +10,7 @@ def generate_main_frame():
     return output
 
 def insert_text(surface, line, text):
-    font = pygame.font.Font(pygame.font.match_font("determinationmonoweb"), 32)
+    font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 32)
     if line == 1:
         start_position = (188, 31)
     elif line == 2:
@@ -23,7 +23,7 @@ def insert_character(surface, char, version):
     surface.blit(pygame.load(os.path.join("assets", char, str(version))+".png", (24, 24))
 
 def insert_asterisk(surface, line):
-    font = pygame.font.Font(pygame.font.match_font("determinationmonoweb"), 32)
+    font = pygame.font.Font(os.path.join("assets", "dtm.ttf"), 32)
     if line == 1:
         start_position = (153, 31)
     elif line == 2:
